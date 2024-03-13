@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Profile Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+
+            <h2>Profile Page</h2>
+            <button onclick="logout()" style="float: right;" class="btn btn-danger">LogOut</button>
+            <hr>
+            <h3>Welcome <span style="color: darkturquoise;"><script>document.write(localStorage.getItem("name"))</script></span></h3>
+            <h4>Your E-mail is <span style="color: rgb(33, 236, 39);"><script>document.write(localStorage.getItem("email"))</script> </span></h4>
+            <h5>Thank You Oasis Infobyte</h5>
+        </div>
+
+    </div>
+</body>
+<script>
+    function logout(){
+        localStorage.removeItem("name");
+        localStorage.removeItem("email");
+        window.location.href="login.html"
+    }
+</script>
+</html>
